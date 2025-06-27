@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Login</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container mt-5">
+      <% if (error) { %>
+      <div class="alert alert-danger"><%= error %></div>
+
+      <script>
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 10000);
+      </script>
+      <% } %>
+
+      <form action="/user/login" method="post">
+        <div class="mb-3">
+          <label for="email" class="form-label">メール</label>
+          <input
+            name="email"
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            required
+          />
+          <div id="emailHelp" class="form-text">
+            What's your email address (メール)?
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">パスワード</label>
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="password"
+            required
+          />
+          <div id="passwordHelp" class="form-text">
+            What's your password (パスワード)?
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+
+    <%- include('./partials/script') %>
+  </body>
+</html>

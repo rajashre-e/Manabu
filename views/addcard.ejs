@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("./partials/head") %>
+    <title>Add Flashcard</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container mt-4">
+      <% if (error) { %>
+      <div class="alert alert-danger"><%= error %></div>
+      <script>
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 10000);
+      </script>
+      <% } %>
+      <h3>Add a New Flashcard</h3>
+      <form method="POST" action="/flashcard/create">
+        <div class="mb-3">
+          <label for="japanese" class="form-label">日本語で</label>
+          <input
+            type="text"
+            id="japanese"
+            name="japanese"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="english" class="form-label">In English</label>
+          <input
+            type="text"
+            id="english"
+            name="english"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="type" class="form-label">Type</label>
+          <select class="form-select" name="type" required>
+            <option value="">Select type</option>
+            <option value="kanji">Kanji</option>
+            <option value="vocab">Vocab</option>
+            <option value="phrase">Phrase</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Card</button>
+      </form>
+    </div>
+
+    <%- include('./partials/script') %>
+  </body>
+</html>

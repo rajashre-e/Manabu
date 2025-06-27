@@ -1,0 +1,102 @@
+[
+  {
+    "japanese": "がっこう",
+    "english": "school",
+    "type": "vocab"
+  },
+  {
+    "japanese": "川",
+    "english": "river",
+    "type": "kanji"
+  },
+  {
+    "japanese": "手",
+    "english": "hand",
+    "type": "kanji"
+  },
+  {
+    "japanese": "戸",
+    "english": "door",
+    "type": "kanji"
+  },
+  {
+    "japanese": "メガネ",
+    "english": "glasses",
+    "type": "vocab"
+  },
+  {
+    "japanese": "タバコ",
+    "english": "tobacco",
+    "type": "vocab"
+  },
+  {
+    "japanese": "赤",
+    "english": "red",
+    "type": "kanji"
+  },
+  {
+    "japanese": "仕事",
+    "english": "work",
+    "type": "vocab"
+  },
+  {
+    "japanese": "英語",
+    "english": "English",
+    "type": "vocab"
+  },
+  {
+    "japanese": "問題",
+    "english": "question",
+    "type": "vocab"
+  },
+  {
+    "japanese": "部屋",
+    "english": "room",
+    "type": "vocab"
+  },
+  {
+    "japanese": "子供",
+    "english": "child",
+    "type": "vocab"
+  },
+  {
+    "japanese": "時間",
+    "english": "time",
+    "type": "vocab"
+  },
+  {
+    "japanese": "雨",
+    "english": "rain",
+    "type": "kanji"
+  },
+  {
+    "japanese": "先生",
+    "english": "teacher",
+    "type": "vocab"
+  },
+  {
+    "japanese": "年",
+    "english": "year",
+    "type": "kanji"
+  },
+  {
+    "japanese": "手紙",
+    "english": "letter",
+    "type": "vocab"
+  },
+  {
+    "japanese": "電話",
+    "english": "telephone",
+    "type": "vocab"
+  },
+  {
+    "japanese": "水",
+    "english": "water",
+    "type": "kanji"
+  },
+  {
+    "japanese": "病気",
+    "english": "illness",
+    "type": "vocab"
+  }
+]
