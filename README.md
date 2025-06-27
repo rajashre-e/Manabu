@@ -1,4 +1,4 @@
-# Manabu 2.0
+# Manabu
 
 A Japanese flashcard learning app built with the MERN stack principles (MongoDB, Express, Node.js) and EJS for templating. 
 Designed as a smarter Anki alternative with CRUD features and user authentication.
