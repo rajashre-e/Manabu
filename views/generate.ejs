@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("./partials/head") %>
+    <title>Example - れい</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container mt-4">
+      <% if (error) { %>
+      <div class="alert alert-danger"><%= error %></div>
+      <script>
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 5000);
+      </script>
+      <% } %>
+
+      <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow rounded-4" style="min-width: 400px">
+          <p><strong>日本語で :</strong> <%=flashcard.japanese %></p>
+          <p><strong>In English :</strong> <%=flashcard.english %></p>
+
+          <hr />
+          <p><strong>Sentence/ぶんしょ :</strong> <%=sentence %></p>
+          <p><strong>Furigana/ふりがな :</strong> <%=furigana %></p>
+          <p><strong>Translation :</strong> <%=translation %></p>
+
+          <% if (user) { %>
+          <form
+            action="/flashcard/<%= flashcard._id %>/save-sentence"
+            method="POST"
+          >
+            <input type="hidden" name="sentence" value="<%= sentence %>" />
+            <input type="hidden" name="furigana" value="<%= furigana %>" />
+            <input
+              type="hidden"
+              name="translation"
+              value="<%= translation %>"
+            />
+            <button type="submit">Save Sentence</button>
+          </form>
+
+          <p class="save-status text-success mt-2" style="display: none">
+            Sentence Saved!
+          </p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/script') %>
+  </body>
+</html>
