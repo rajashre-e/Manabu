@@ -59,6 +59,7 @@ app.get("/", async (req, res) => {
       flashcards: show,
       user: req.user || null,
       error: null,
+      error: null,
     });
   } catch (error) {
     console.log(error);
