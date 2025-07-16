@@ -1,41 +1,39 @@
-# Manabu
+# 🌸 ようこそ！Manabu へ
 
-A Japanese flashcard learning app built with the MERN stack principles (MongoDB, Express, Node.js) and EJS for templating.
-Designed as a smarter Anki alternative with CRUD features and user authentication.
+Manabu is a Japanese flashcard learning app built with Node.js, Express, and MongoDB, using EJS for server-side rendering.  
+It’s designed as a smarter Anki alternative with CRUD flashcards, AI-generated example sentences, pronunciation practice, and quiz-based vocabulary tests.
 
 ## Tech Stack
 
-* Node.js and Express for backend
-* MongoDB with Mongoose for database and models
-* EJS as the templating engine
-* Method-override for PUT/DELETE via forms
-* bcrypt for password hashing
-* dotenv for environment config
-* cookie-parser for session handling
-* OpenRouter / DeepSeek API for sentence generation
+- Node.js, Express, MongoDB & Mongoose
+- EJS templating & Bootstrap 5
+- JWT & cookie-parser for authentication
+- express-session for quiz score tracking
+- dotenv & method-override
+- bcrypt for password hashing
+- Axios (OpenRouter DeepSeek API) for sentence generation
+- Wanakana & browser Speech APIs for text normalization, TTS & speech recognition
 
 ## Features
 
-* User signup, login, and logout
-* Auth-protected flashcard creation, update, and deletion
-* Flashcards categorized by type: kanji, vocab, or phrase
-* Default flashcards for unauthenticated users
-* Generate N5-level Japanese example sentences from flashcards
-* Save generated sentences to user’s profile
-* View and delete saved sentences
-* Structured error handling with redirection and messages
-* Clean EJS views with partials for layout reuse
+- User signup, login, logout (secure cookies with JWT)
+- Flashcard create, update & delete (kanji, vocab, phrase)
+- Generate & save AI-created example sentences
+- Vocabulary test with scoring
+- Pronunciation test with speech recognition
+- Text-to-speech playback
+- Default flashcards for guests
 
-## Routes Overview
+## Key Routes
 
-* GET `/` - Home with flashcards
-* GET/POST `/user/signup` and `/user/signin`
-* GET/POST `/flashcard/create`
-* GET/PUT `/flashcard/:id/update`
-* DELETE `/flashcard/delete/:id`
-* GET `/flashcard/generate/:id` – Generate a sample sentence for a flashcard
-* POST `/flashcard/:id/save-sentence` – Save generated sentence
-* GET `/flashcard/view-sentences` – View all saved sentences
-* DELETE `/flashcard/sentence/delete/:id` – Delete a saved sentence
+- `/` – Home (flashcards)
+- `/user/signup` & `/user/login` – Register / Login
+- `/flashcard/create` – Add new flashcard
+- `/flashcard/generate/:id` – Generate AI example sentence
+- `/test/vocab` – Take vocabulary quiz
+- `/test/pronunciation` – Pronunciation test
 
+---
+
+✨ 楽しく日本語を学ぼう、**Manabu** と一緒 ！
 
