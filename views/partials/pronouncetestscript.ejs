@@ -1,0 +1,69 @@
+<script>
+  const target = "<%= targetSentence.japanese %>";
+  const startBtn = document.getElementById("startBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const statusMessage = document.getElementById("statusMessage");
+
+  let recognition;
+
+  if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.lang = "ja-JP";
+    recognition.interimResults = false;
+
+    const normalize = (str) => {
+      const replaced = str
+        .replace(/[。、\s]/g, "")
+        .replace(/0/g, "零")
+        .replace(/1/g, "一")
+        .replace(/2/g, "二")
+        .replace(/3/g, "三")
+        .replace(/4/g, "四")
+        .replace(/5/g, "五")
+        .replace(/6/g, "六")
+        .replace(/7/g, "七")
+        .replace(/8/g, "八")
+        .replace(/9/g, "九");
+      return wanakana.toHiragana(replaced).replace(/っ/g, "");
+    };
+
+    recognition.onstart = () => {
+      statusMessage.textContent = "Listening...";
+      statusMessage.style.color = "#333";
+    };
+
+    recognition.onerror = (e) => {
+      statusMessage.textContent = "Error: " + e.error;
+      statusMessage.style.color = "red";
+    };
+
+    recognition.onresult = (e) => {
+      const transcript = e.results[0][0].transcript;
+      console.log("Original transcript:", transcript);
+      console.log("Normalized transcript:", normalize(transcript));
+      console.log("Normalized target:", normalize(target));
+
+      if (normalize(transcript) === normalize(target)) {
+        statusMessage.textContent = "✅ Good job!";
+        statusMessage.style.color = "green";
+      } else {
+        statusMessage.textContent = "❌ Try again!";
+        statusMessage.style.color = "red";
+      }
+    };
+
+    startBtn.addEventListener("click", () => {
+      recognition.start();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      window.location.reload();
+    });
+  } else {
+    statusMessage.textContent =
+      "Sorry, your browser doesn't support speech recognition.";
+    statusMessage.style.color = "red";
+  }
+</script>

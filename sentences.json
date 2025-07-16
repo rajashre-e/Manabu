@@ -1,0 +1,88 @@
+[
+  { "japanese": "これは本です。", "english": "This is a book." },
+  {
+    "japanese": "あれは私の傘です。",
+    "english": "That (over there) is my umbrella."
+  },
+  { "japanese": "田中さんは学生です。", "english": "Mr. Tanaka is a student." },
+  { "japanese": "これはいくらですか。", "english": "How much is this?" },
+  { "japanese": "これは日本の車です。", "english": "This is a Japanese car." },
+  { "japanese": "あの人は誰ですか。", "english": "Who is that person?" },
+  {
+    "japanese": "電話番号は何番ですか。",
+    "english": "What is your phone number?"
+  },
+  { "japanese": "私は学校へ行きます。", "english": "I go to school." },
+  { "japanese": "今、何時ですか。", "english": "What time is it now?" },
+  { "japanese": "今日は暑いです。", "english": "It's hot today." },
+  { "japanese": "私はコーヒーを飲みます。", "english": "I drink coffee." },
+  {
+    "japanese": "このペンは使いやすいです。",
+    "english": "This pen is easy to use."
+  },
+  { "japanese": "図書館はどこですか。", "english": "Where is the library?" },
+  { "japanese": "東京は大きいです。", "english": "Tokyo is big." },
+  { "japanese": "私は日本語を勉強します。", "english": "I study Japanese." },
+  {
+    "japanese": "あそこに猫がいます。",
+    "english": "There is a cat over there."
+  },
+  { "japanese": "りんごを三つ食べます。", "english": "I eat three apples." },
+  { "japanese": "駅まで歩きます。", "english": "I walk to the station." },
+  { "japanese": "このケーキは甘いです。", "english": "This cake is sweet." },
+  { "japanese": "昨日は雨でした。", "english": "It rained yesterday." },
+  {
+    "japanese": "来週、大阪へ行きます。",
+    "english": "Next week, I will go to Osaka."
+  },
+  {
+    "japanese": "私の誕生日は７月です。",
+    "english": "My birthday is in July."
+  },
+  { "japanese": "これは辞書です。", "english": "This is a dictionary." },
+  { "japanese": "テレビを見ますか。", "english": "Do you watch TV?" },
+  { "japanese": "この傘は私のです。", "english": "This umbrella is mine." },
+  {
+    "japanese": "机の上に本があります。",
+    "english": "There is a book on the desk."
+  },
+  {
+    "japanese": "学校に学生がいます。",
+    "english": "There are students at school."
+  },
+  {
+    "japanese": "郵便局はあそこです。",
+    "english": "The post office is over there."
+  },
+  { "japanese": "私は朝ごはんを食べました。", "english": "I ate breakfast." },
+  { "japanese": "どこへ行きますか。", "english": "Where are you going?" },
+  { "japanese": "公園で遊びます。", "english": "I play in the park." },
+  {
+    "japanese": "バスで会社へ行きます。",
+    "english": "I go to the company by bus."
+  },
+  { "japanese": "私は英語がわかります。", "english": "I understand English." },
+  { "japanese": "これは何ですか。", "english": "What is this?" },
+  { "japanese": "新しい靴がほしいです。", "english": "I want new shoes." },
+  { "japanese": "京都はきれいです。", "english": "Kyoto is beautiful." },
+  { "japanese": "この料理はからいです。", "english": "This dish is spicy." },
+  { "japanese": "私は犬が好きです。", "english": "I like dogs." },
+  { "japanese": "友だちと話します。", "english": "I talk with my friend." },
+  {
+    "japanese": "日本に山があります。",
+    "english": "There are mountains in Japan."
+  },
+  { "japanese": "その本をください。", "english": "Please give me that book." },
+  { "japanese": "今日はいい天気です。", "english": "Today's weather is good." },
+  {
+    "japanese": "私は漢字が少し読めます。",
+    "english": "I can read some kanji."
+  },
+  { "japanese": "この電車は速いです。", "english": "This train is fast." },
+  { "japanese": "窓をあけてください。", "english": "Please open the window." },
+  {
+    "japanese": "週末は何をしますか。",
+    "english": "What will you do on the weekend?"
+  },
+  { "japanese": "お元気ですか。", "english": "How are you?" }
+]

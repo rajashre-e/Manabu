@@ -1,0 +1,57 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("vocabTestForm");
+    const statusMessageDiv = document.getElementById("statusMessage");
+
+    if (form) {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        statusMessageDiv.textContent = "Submitting your answers...";
+        statusMessageDiv.style.color = "blue";
+
+        const formData = new FormData(form);
+        const answers = {};
+        const correctAnswers = {};
+
+        for (let [key, value] of formData.entries()) {
+          if (key.startsWith("answers[")) {
+            const questionKey = key.substring(8, key.length - 1);
+            answers[questionKey] = value;
+          } else if (key.startsWith("correctAnswers[")) {
+            const questionKey = key.substring(15, key.length - 1);
+            correctAnswers[questionKey] = value;
+          }
+        }
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            headers: {
+              "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify({ answers, correctAnswers }),
+          });
+
+          if (response.redirected) {
+            window.location.href = response.url;
+          } else {
+            const responseText = await response.text();
+            statusMessageDiv.textContent = `Error: Unexpected server response. ${responseText.substring(
+              0,
+              100
+            )}`;
+            statusMessageDiv.style.color = "red";
+            console.error("Unexpected server response:", responseText);
+          }
+        } catch (error) {
+          console.error("Error during form submission:", error);
+          statusMessageDiv.textContent =
+            "Submission failed. Please check your internet connection or try again.";
+          statusMessageDiv.style.color = "red";
+        }
+      });
+    }
+  });
+</script>

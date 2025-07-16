@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("./partials/head") %>
+    <title>Test - テスト</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container mt-5">
+      <% if (error) { %>
+      <div class="alert alert-danger"><%= error %></div>
+      <script>
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 5000);
+      </script>
+      <% } %>
+
+      <h1 class="text-center mb-4">Let's Test!</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-3">
+          <a
+            href="/test/vocab"
+            class="test-card d-flex align-items-center justify-content-center"
+          >
+            <h2>ごい</h2>
+            <div class="small text-muted">vocabulary</div>
+          </a>
+        </div>
+        <div class="col-md-5 mb-3">
+          <a
+            href="/test/pronunciation"
+            class="test-card d-flex align-items-center justify-content-center"
+          >
+            <h2>はつおん</h2>
+            <div class="small text-muted">pronunciation</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .test-card {
+        height: 200px;
+        background: #f8f9fa;
+        border-radius: 16px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .test-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        color: #000;
+      }
+    </style>
+
+    <%- include('./partials/script') %>
+  </body>
+</html>
